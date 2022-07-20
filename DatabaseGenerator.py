@@ -1,5 +1,4 @@
 import mysql.connector as sql
-import csv
 from openpyxl import load_workbook
 
 data_file = 'Reaction components.xlsx'
@@ -12,7 +11,7 @@ ws = wb['Master_rxn']
 all_rows = list(ws.rows)
 
 
-mydb = sql.connect(host="localhost", user="root", passwd="MySQL_R00t!", database="RunawayReactions")
+mydb = sql.connect(host="localhost", user="root", passwd="", database="RunawayReactions")
 my_cursor = mydb.cursor()
 
 
