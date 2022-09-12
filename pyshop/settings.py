@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'runawayreactions',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'MySQL_R00t!',
         'HOST': "localhost"
     }
 }
