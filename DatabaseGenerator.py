@@ -11,11 +11,12 @@ ws = wb['Master_rxn']
 all_rows = list(ws.rows)
 
 
-mydb = sql.connect(host="localhost", user="root", passwd="", database="RunawayReactions")
+mydb = sql.connect(host="localhost", user="root", passwd="MySQL_R00t!", database="test")
 my_cursor = mydb.cursor()
 
 
 def insert_reactions():
+    my_cursor.execute("create table if not exists products_reactions (reaction_id integer, reaction_desc varchar(1024), reactants varchar(1024), products varchar(1024), yield_percent varchar(20), additional_products varchar(1024), steps integer, stages varchar(1024), reagents varchar(1024), catalyst varchar(1024), solvents varchar(1024), conditions varchar(1024), time varchar(1024), temp varchar(1024), pressure varchar(20), Lit_ref varchar(2048), endo_exo varchar(20), cas_member_method varchar(50));")
     for row in all_rows[1:126]:
         i = 0;
         while i < 18:
